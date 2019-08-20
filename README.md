@@ -1,1 +1,20 @@
-# Szukajka_link_scrapper
+# Szukajka movie link scrapper
+
+The script sends a query to [Szukajka](Szukajka.tv) and parses the website.
+
+## install chromedriver for selenium
+```
+wget https://chromedriver.storage.googleapis.com/77.0.3865.10/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip -d .
+sudo mv ./chromedriver /usr/local/share/
+sudo ln -sf /usr/local/share/chromedriver /usr/local/bin
+```
+
+## how to use
+```
+python main.py
+    --title <TITLE> (required)
+    --source <SOURCE> (optional: 'all', 'gounlimited', 'openload', 'streamango', 'streamcherry', 'verystream', 'vidoza')
+    --version <VERSION> (optional: 'all', 'dub', 'org', 'sub')
+    -d (optional flag to automatically download from link)
+```
