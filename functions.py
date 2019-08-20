@@ -1,6 +1,11 @@
 import re
 from bs4 import BeautifulSoup as bs
 
+def get_clipwatching(driver):
+    driver.find_element_by_tag_name('body').click()
+    soup = bs(driver.page_source, 'html.parser')
+
+    return soup.video['src']
 
 def get_gounlimited(driver):
     page = driver.page_source
@@ -48,6 +53,7 @@ def get_vidoza(driver):
 
 
 functions = {
+    'clipwatching': get_clipwatching,
     'gounlimited': get_gounlimited,
     'openload': get_openload,
     'streamango': get_streamango,

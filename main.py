@@ -1,6 +1,7 @@
 import requests
 import sys
 import argparse
+import pathlib
 
 from tqdm import tqdm
 from selenium import webdriver
@@ -10,6 +11,7 @@ from functions import functions
 
 hosts = {
     'all': 0,
+    'clipwatching': 49,
     'gounlimited': 51,
     'openload': 1,
     'streamango': 37,
@@ -104,6 +106,8 @@ def get_movie_url(query, host):
 
 
 def download(query, file_name):
+    pathlib.Path('download/').mkdir(parents=True, exist_ok=True) 
+    
     file_name = file_name.replace(' ', '_')+'.mp4'
     with open('download/'+file_name, "wb") as f:
         response = requests.get(query, stream=True)
@@ -133,14 +137,13 @@ def main():
             print('>> Try {}/{}'.format(i+1, len(movies)))
             movie = get_source_url(link)
             url = get_movie_url(movie, host)
-            if down:
-                download(url, name)
-            else:
-                print('>> File: {}'.format(url))
-            return
         except Exception as e:
             continue
 
+        print('>> File: {}'.format(url))
+        if down:
+            download(url, name)
+        return
 
 if __name__ == "__main__":
     main()

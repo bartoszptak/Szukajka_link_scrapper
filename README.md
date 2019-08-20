@@ -22,7 +22,7 @@ tqdm==4.33.0
 ```
 python main.py
     --title <TITLE> (required)
-    --source <SOURCE> (optional: 'all', 'gounlimited', 'openload', 'streamango', 'streamcherry', 'verystream', 'vidoza')
+    --source <SOURCE> (optional: 'all', 'clipwatching', 'gounlimited', 'openload', 'streamango', 'streamcherry', 'verystream', 'vidoza')
     --version <VERSION> (optional: 'all', 'dub', 'org', 'sub')
     -d (optional flag to automatically download from link)
 ```
