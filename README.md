@@ -1,6 +1,6 @@
 # Szukajka movie link scrapper
 
-The script sends a query to [Szukajka](Szukajka.tv) and parses the website.
+The script sends a query to [Szukajka.tv](https://lmgtfy.com/?q=szukajka.tv) and parses the website.
 
 ## install chromedriver for selenium
 ```
