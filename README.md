@@ -1,0 +1,1 @@
+# Szukajka_link_scrapper
