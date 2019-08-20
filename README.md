@@ -10,6 +10,14 @@ sudo mv ./chromedriver /usr/local/share/
 sudo ln -sf /usr/local/share/chromedriver /usr/local/bin
 ```
 
+## requirements
+```
+requests==2.22.0
+selenium==3.141.0
+bs4==0.0.1
+tqdm==4.33.0
+```
+
 ## how to use
 ```
 python main.py
