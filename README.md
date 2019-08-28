@@ -3,6 +3,8 @@
 The script sends a query to [Szukajka.tv](https://lmgtfy.com/?q=szukajka.tv) and parses the website.
 
 ## install chromedriver for selenium
+
+[Download](https://chromedriver.chromium.org/downloads) a version compatible with your browser.
 ```
 wget https://chromedriver.storage.googleapis.com/77.0.3865.10/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip -d .
